@@ -4,13 +4,9 @@ Socket-Chat的web端，基于vue+socketio实现，目前实现了基本的用户
 
 ## 若要在网上发布，请注明出处，谢谢！
 
-## 项目演示
+## nodejs版本
 
-[【Socket-Chat】在线聊天系统项目（仿微信）express+vue+socketio_哔哩哔哩_bilibili](https://www.bilibili.com/video/BV1iY4y1s7pD)
-
-## 在线demo
-
-~~http://codeman.ink:666/~~ (处于安全考虑, 暂时不开放demo)
+16.20.2
 
 ## 安装步骤
 
