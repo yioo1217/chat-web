@@ -93,6 +93,7 @@ export default defineComponent({
       }
 
       let res = await api_login(state.loginInfo)
+      localStorage.setItem("publicKey", res.publicKey)
       if (res) {
         store.commit('setUserInfo', res.userInfo)
         router.push('/index')

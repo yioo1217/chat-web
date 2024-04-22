@@ -9,7 +9,8 @@ const api_login = (loginInfo: { userName: string, password: string }) => {
 type loginType = {
   code: number,
   msg: string,
-  userInfo: User
+  userInfo: User,
+  publicKey: any,
 }
 
 // 注册
