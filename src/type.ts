@@ -112,9 +112,11 @@ export interface User {
   avatar: string,
   email: string | null,
   createdAt?: string,
+  priKey: string,
+  pubKey?: string,
 }
 
-// export type Friend = User 
+// export type Friend = User
 export type Friend = User;
 
 export interface FriendRequest {

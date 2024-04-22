@@ -101,14 +101,14 @@ export default defineComponent({
 
     // 点击注册的回调
     const signin = async () => {
-      const info = state.registerInfo
+      const info = {...state.registerInfo,priKey:''}
       // 判断是否存在空值
-      for (let key in info) {
-        if (!info[key as keyof typeof info].trim()) {
-          message.warning(`${key}不能为空哦`)
-          return
-        }
-      }
+      // for (let key in info) {
+      //   if (!info[key as keyof typeof info].trim()) {
+      //     message.warning(`${key}不能为空哦`)
+      //     return
+      //   }
+      // }
 
       if (info.password !== info.confirmPassword) {
         message.warning('两次密码不一致')
@@ -127,6 +127,8 @@ export default defineComponent({
       if (res) {
         message.success('注册成功')
         state.isLogin = true
+        //把私钥存在浏览器
+        localStorage.setItem('key', res.userInfo.priKey);
         state.loginInfo = {
           userName: info.userName,
           password: '',
